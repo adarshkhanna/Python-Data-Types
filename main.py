@@ -96,3 +96,58 @@ b = 0.3
 print('0.1 + 0.1 + 0.1 = ', format(a, '.25f'))
 print('0.3 = ',format(b, '.25f'))
 print('is a == b ? ', a == b)
+
+"""
+  define function
+"""
+def hello_world():
+  print('Hello World!')
+
+"""
+  call a  function
+"""
+hello_world()
+
+"""
+  Function parameters : 
+     positional args - order in which it is passed
+     keyword / named args - use parm name when passing value
+"""
+## if a positional parm is defined with default value, all sunsequent params must have default value 
+def my_func(a,b=10, c=5):
+  pass
+
+my_func(10,20)
+my_func(5)
+
+## if using named arg, all subsequent args must also be named args
+my_func(a=1, c=2)  # a=1, b=10, c=2
+my_func(1, c=2) # a=1, b=10,c=2
+
+"""
+  Passing variable amount of position args 
+  The recieving parm *c will be a tuple
+  Cannot add positional arg after *c, but can add keyword/named arg
+"""
+def my_func(a,b,*c,d):
+  print('multiple arg as one :',a,b,c,d)
+
+my_func(10,20,'a','b',d=10)
+
+"""
+  make positional args optional
+"""
+def my_func(*args,d):
+  print('optional positional args: ',args,d)
+
+my_func(1,2,d=10)
+my_func(d=2)
+
+"""
+  make a function with no positional args
+"""
+
+def my_func(*,d):
+  print('no position args: ',d)
+
+my_func(d=10)
