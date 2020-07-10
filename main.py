@@ -1,4 +1,33 @@
 #Fundamental Data Types
+"""
+  Numbers (immutable)
+    Integral
+      Integers (int)
+      Boolean (bool)
+    Non-Integral
+      Float (float) - implemented as C double
+      Complex (complex)
+      Decimal (decimal.Decimal) 
+      Fractions (fractions.Fraction)
+  
+  Collections
+    Sequences
+      Lists (list)   - mutable
+      Tuples (tuple) - immutable
+      Strings (str)  - immutable
+    
+    Sets (implemented as hashmap)
+      Sets (set) - mutable
+      Frozensets (frozenset) - immutable
+    
+    Mappings (implemented as hashmap)
+      Dictionaries (dict) - mutable
+  
+  Singletons
+    None
+    NotImplemented
+    Ellipsis (...) operator
+"""
 print('int + int: ', type(2 + 4))  # int + int = int
 print('int - int: ', type(2 - 4))  # int - int = int
 print('int * int: ', type(2 * 4))  # int * int = int
@@ -33,10 +62,10 @@ print('trunc(floor(-6/4)): ', trunc(-6/4))
 
 
 # math functions
-print(round(3.1))
-print(round(3.9))
+print('round(3.1): ', round(3.1))
+print('round(3.9): ', round(3.9))
 
-print(abs(-2.1))
+print('abs(-2.1): ',abs(-2.1))
 
 # How large an integer can be ??
 
@@ -151,3 +180,33 @@ def my_func(*,d):
   print('no position args: ',d)
 
 my_func(d=10)
+
+# 1 What would be the output of the below 4 print statements? 
+#Try to answer these before you click RUN!
+
+print("Hello {}, your balance is {}.".format("Cindy", 50))
+
+print("Hello {0}, your balance is {1}.".format("Cindy", 50))
+
+print("Hello {name}, your balance is {amount}.".format(name="Cindy", amount=50))
+
+print("Hello {0}, your balance is {amount}.".format("Cindy", amount=50))
+
+# 2 How would you write this using f-string? 
+name = 'Cindy'
+amount = 50
+print(f"Hello {name}, your balance is {amount}.")
+
+#Guess the output of each print statement before you click RUN!
+# [start:stop:stepover]
+python = 'I am PYHTON'
+print('string = ', python)
+print('[1:4] = ',python[1:4])
+print('[1:] = ', python[1:])
+print('[:] = ', python[:])
+print('[1:100] = ', python[1:100])
+print('[-1] = ', python[-1])   # -ve index start at end
+print('[-4] = ', python[-4])
+print('[:-3] = ', python[:-3])
+print('[-3:] = ', python[-3:])
+print('[::-1] = ', python[::-1])
