@@ -348,9 +348,59 @@ print(a,b,c,d)
 #fix this code so that it prints a sorted list of all of our friends (alphabetical). Scroll to see answer
 friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
 
-new_friend = ['Stanley']
-a = friends.sort() + new_friend
-print(friends.sort() + new_friend)
+# new_friend = ['Stanley']
+# a = friends.sort() + new_friend
+# print(friends.sort() + new_friend)
 
+"""
+  Dictionaries (unordered key-value pair - not next to each other like in list)
 
+  key = has to be immutable & unique
+"""
+dictionary = {
+  'a':1,
+  'b':2,
+  'b':4
+}
 
+print('dictionary element: ', dictionary['b'])
+
+my_list = [{
+  'a': [1,2,3],
+  'b': 'hello',
+  'x': True
+}]
+print('list of dict: ', my_list[0]['a'])
+
+"""
+  List : use it when you want order 
+  Dict : stores more info (key-value)
+  tuple : immutable list
+  set : unordered collection of unique objects
+"""
+
+my_tuple = (1,2,3,4,5)  # just like list but immutable
+my_tuple = (1,2,3,4,5,5) # can have duplicates
+
+#1 Create a user profile for your new game. This user profile will be stored in a dictionary with keys: 'age', 'username', 'weapons', 'is_active' and 'clan'
+
+#2 iterate and print all the keys in the above user.
+
+#3 Add a new weapon to your user
+
+#4 Add a new key to include 'is_banned'. Set it to false
+
+#5 Ban the user by setting the previous key to True
+
+#6 create a new user2 my copying the previous user and update the age value and username value. 
+
+my_set = {1,2,3,4,5}
+your_set = {4,5,6,7,8,9,10}
+
+print('set difference: ', my_set.difference(your_set))
+
+# You are working for the school Principal. We have a database of school students:
+school = {'Bobby','Tammy','Jammy','Sally','Danny'}
+
+#during class, the teachers take attendance and compile it into a list. 
+attendance_list = ['Jammy', 'Bobby', 'Danny', 'Sally']
