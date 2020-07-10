@@ -210,3 +210,147 @@ print('[-4] = ', python[-4])
 print('[:-3] = ', python[:-3])
 print('[-3:] = ', python[-3:])
 print('[::-1] = ', python[::-1])
+
+"""
+  String immutability
+"""
+s = 'abcde'
+print('string slice [0]', s[0])
+# s[0]='z'
+
+print('len of string: ',len(s))
+
+print('upper: ', s.upper(),
+      '\ncapitalize: ',s.capitalize(),
+      '\nfind: ', s.find('bc'),
+      '\nreplace: ',s.replace('bc','zz'),
+      '\nrepeat X 2: ',s*2,
+      '\noriginal: ',s,)
+
+"""
+  Lists - can contain heterogenous data types
+"""
+li = [1,2,3]
+print('li: ',li)
+
+li2=['a','b','c']
+print('li2: ',li2)
+
+li3=[1,2,'a',True]
+print('li3: ',li3)
+
+# list is mutable
+li[0]=10
+print('li mutated: ',li)
+
+# Matrix
+matrix = [
+  [1,0,1],
+  [0,1,0],
+  [1,0,1]
+]
+
+print('matrix: ', matrix)
+
+print('matrix 1st row: ', matrix[0],
+'\nmatrix 1st row, 1st element: ',matrix[0][0])
+
+#What is the output of this code?
+#Before you clikc RUN, guess the output of each print statement!
+new_list = ['a', 'b', 'c']
+print(new_list[1])
+print(new_list[-2])
+print(new_list[1:3])
+new_list[0] = 'z'
+print(new_list)
+
+my_list = [1,2,3]
+bonus = my_list + [5]
+my_list[0] = 'z'
+print(my_list)
+print(bonus)
+
+# append elemets to a list
+basket = [1,2,3,4,5]
+print('basket before append: ', basket)
+basket.append(6)
+print('basket after append: ',basket)
+
+basket.insert(5,100)
+print('basket after insert: ',basket)
+
+basket.extend([120]) # extend takes an iterable
+print('basket after extend: ',basket)
+
+# removing
+basket.pop()  # removes from end of list
+print('basket after pop: ',basket)
+
+basket.pop(0) # remove from index=0
+print('basket after pop at index 0: ',basket)
+
+basket.remove(4) # remove the value 4
+print('basket after remove: ',basket)
+
+basket.clear() # removes all items from list
+print('basket after clear: ',basket)
+
+# using this list, 
+basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+
+# 1. Remove the Banana from the list
+
+# 2. Remove "Blueberries" from the list.
+
+# 3. Put "Kiwi" at the end of the list.
+
+# 4. Add "Apples" at the beginning of the list
+
+# 5. Count how many apples in the basket
+
+# 6. empty the basket
+
+print(basket)
+
+basket = ['x','y','a','b','c','d','e']
+# print(basket.index('d',0,3))
+
+# to avoid error 
+print('d' in basket)
+print(basket.count('d')) # number of times 'd' occurs 
+basket.sort()
+print(basket)
+
+print(sorted(basket)) # returns a new sorted array, does not change basket
+
+basket.reverse()  # reverse the list
+print(basket)
+
+### generate list quickly
+print(range(1,100))
+print(list(range(101)))
+
+### join list
+sentence = '!'
+new_sentence = sentence.join(['hi','my','name','is','Adarsh']
+)
+print(new_sentence)
+
+new_sentence = ' '.join(['hi','my','name','is','Adarsh']
+)
+print(new_sentence)
+
+### list unpacking
+a,b,c,*d = [1,2,3,4,5,6]
+print(a,b,c,d)
+
+
+#fix this code so that it prints a sorted list of all of our friends (alphabetical). Scroll to see answer
+friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+
+new_friend = ['Stanley']
+a = friends.sort() + new_friend
+print(friends.sort() + new_friend)
+
+
+
