@@ -60,14 +60,14 @@ import sys
 # Everything is an object 
 # Let's find how much memory overhead an integer object has  
 
-print(sys.getsizeof(0))  # 24 bytes = overhead of integer object
+print('Overhead of int(0) object: ', sys.getsizeof(0))  # 24 bytes = overhead of integer object
 
-print(sys.getsizeof(1))  # 28 - 24 = 4 additional bytes to store 1
+print('Overhead of int(1) object: ', sys.getsizeof(1))  # 28 - 24 = 4 additional bytes to store 1
 
-print(sys.getsizeof(2**1000))  # 160 - 24 = 158 additional bytes to store 2**1000
+print('Overhead of int (2**1000) object: ', sys.getsizeof(2**1000))  # 160 - 24 = 158 additional bytes to store 2**1000
 
 from fractions import Fraction
-import decimal
+from decimal import Decimal
 
 """
   Four main types of numbers
@@ -80,3 +80,19 @@ import decimal
 
   Boolean : 0 = False, 1 = True
 """
+
+"""
+  Fraction is more accurate but takes more memory
+"""
+print('Fraction: ', Fraction(2,3))
+print('Decimal: ', Decimal(2/3))
+
+"""
+  Float's inernal representation is approximate (sign, exponent, significant digit)
+  1.2345, 12345000000, 0.00012345, 12345e-50 -> 5 significant digits 
+"""
+a = 0.1 + 0.1 + 0.1
+b = 0.3
+print('0.1 + 0.1 + 0.1 = ', format(a, '.25f'))
+print('0.3 = ',format(b, '.25f'))
+print('is a == b ? ', a == b)
